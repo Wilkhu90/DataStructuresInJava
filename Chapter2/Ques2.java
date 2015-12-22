@@ -56,7 +56,18 @@ public class Ques2{
 		}
 		System.out.println(solution.item);
 
-	}	
+	}
+	public int displayKthRecursive(Node head, int k){
+		if(head == null)
+			return 0;
+
+		int i = displayKthRecursive(head.next, k) + 1;
+		if(i == k){
+			System.out.println(head.item);
+		}
+		return i;
+
+	}
 
 
 	public static void main(String[] args){
@@ -68,8 +79,9 @@ public class Ques2{
 		lList.addElement(3);
 		lList.addElement(5);
 		lList.addElement(3);
-		lList.addElement(2);
-		solution.displayKth(lList, 4);		
+		lList.addElement(7);
+		solution.displayKth(lList, 1);
+		solution.displayKthRecursive(lList.head, 1);	
 
 	}
 }
