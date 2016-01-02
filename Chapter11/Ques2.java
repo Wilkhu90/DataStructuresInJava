@@ -1,7 +1,7 @@
 import java.util.Comparator;
 import java.util.Arrays;
 
-public class Ques2 implements Comparator<String>{
+class AnagramComparator implements Comparator<String>{
 
 	public String sortChars(String A){
 
@@ -15,11 +15,13 @@ public class Ques2 implements Comparator<String>{
 		return sortChars(A).compareTo(sortChars(B));
 
 		}
+}
 
+public class Ques2{
 
 	public static void main(String[] args){
 
-		Ques2 comparator = new Ques2();
+		AnagramComparator comparator = new AnagramComparator();
 		String[] A = {"race","anagram","nagaram","assda","acre","asda","asd","care","fff","asda"};
 		
 		Arrays.sort(A, comparator);
